@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         responseInput.value = 'yes';
         response.classList.remove('hidden');
-        response.innerHTML = 'Yay! You said yes! 💕 I love you so much!';
+        response.innerHTML = 'Ndokudai! 💕 To The Moon And Back!';
         yesBtn.style.display = 'none';
         noBtn.style.display = 'none';
         // Submit the form after a short delay to show the message
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         responseInput.value = 'no';
         response.classList.remove('hidden');
-        response.innerHTML = 'Oh no! But I\'ll keep trying! 😘';
+        response.innerHTML = 'Ouch! But I\'ll keep trying! 😘';
         // Make the no button move away on hover
         noBtn.addEventListener('mouseover', function() {
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
