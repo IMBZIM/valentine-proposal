@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
         response.innerHTML = 'Ndokudai! 💕 To The Moon And Back!';
         yesBtn.style.display = 'none';
         noBtn.style.display = 'none';
+        // Show the love image
+        const loveImage = document.getElementById('love-image');
+        loveImage.classList.remove('hidden');
         // Submit the form after a short delay to show the message
         setTimeout(() => {
             yesBtn.closest('form').submit();
@@ -32,18 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     noBtn.addEventListener('click', function(event) {
         event.preventDefault();
-        responseInput.value = 'no';
-        response.classList.remove('hidden');
-        response.innerHTML = 'Ouch! But I\'ll keep trying! 😘';
+        // Move on click for annoyance
+        moveNoBtn();
         // Move sideways on mouseenter for annoyance
         noBtn.addEventListener('mouseenter', moveNoBtn);
         // Move sideways on touchstart for mobile annoyance
         noBtn.addEventListener('touchstart', moveNoBtn);
-        // Submit the form after a delay to allow annoyance
-        setTimeout(() => {
-            noBtn.removeEventListener('mouseenter', moveNoBtn);
-            noBtn.removeEventListener('touchstart', moveNoBtn);
-            noBtn.closest('form').submit();
-        }, 10000); // Increased delay to 10 seconds for more annoyance
+        // Keep moving annoyingly, no submission
     });
 });
