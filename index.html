@@ -11,10 +11,13 @@
         <h1>Will You Be My Valentine?</h1>
         <div class="heart">❤️</div>
         <p>My dearest, will you make me the happiest person by saying yes?</p>
-        <div class="buttons">
-            <button id="yes-btn">Yes! 💕</button>
-            <button id="no-btn">No 😢</button>
-        </div>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="hidden" name="response" id="response-input">
+            <div class="buttons">
+                <button type="submit" id="yes-btn" onclick="setResponse('yes')">Yes! 💕</button>
+                <button type="submit" id="no-btn" onclick="setResponse('no')">No 😢</button>
+            </div>
+        </form>
         <div id="response" class="hidden"></div>
     </div>
     <script src="script.js"></script>
