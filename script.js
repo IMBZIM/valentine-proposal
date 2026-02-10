@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Preload the image for faster display on yes click
+    const img = new Image();
+    img.src = 'storage/mrs c.jpg';
+
     const yesBtn = document.getElementById('yes-btn');
     const noBtn = document.getElementById('no-btn');
     const response = document.getElementById('response');
