@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
         noBtn.style.position = 'absolute';
     }
 
+    // Add listeners for annoyance on hover and touch
+    noBtn.addEventListener('mouseenter', moveNoBtn);
+    noBtn.addEventListener('touchstart', moveNoBtn);
+
     yesBtn.addEventListener('click', function(event) {
         event.preventDefault();
         if (noBtnInterval) clearInterval(noBtnInterval);
